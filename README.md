@@ -6,8 +6,8 @@ It leverages Large Language Models (LLMs) along with voice and image generation 
 ---
 
 ## 🚀 Live Demo
-🔗 Live App: https://fitgen-ai.vercel.app 
-🎥 Video Demo: (add Loom / Drive link here)
+🔗 Live App: [LIVE](https://fitgen-ai-lime.vercel.app/)
+🎥 Video Demo: [(Loom)](https://www.loom.com/share/d684441955ec45fa99346de9dc849d7a)
 
 ---
 
