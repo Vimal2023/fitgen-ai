@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💪 FitGen AI — AI Fitness Coach
 
-## Getting Started
+FitGen AI is a modern AI-powered fitness assistant that generates **personalized workout plans, diet plans, and motivation tips** based on user inputs.  
+It leverages Large Language Models (LLMs) along with voice and image generation to deliver an immersive fitness planning experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
+🔗 Live App: https://fitgen-ai.vercel.app 
+🎥 Video Demo: (add Loom / Drive link here)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🧍 User Personalization
+Users can input:
+- Name, age, gender
+- Height & weight
+- Fitness goal (Weight loss, Muscle gain, etc.)
+- Fitness level (Beginner / Intermediate / Advanced)
+- Workout location (Home / Gym / Outdoor)
+- Dietary preference (Veg / Non-veg / Vegan / Keto)
+- Optional medical or lifestyle details
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### 🧠 AI-Powered Plan Generation
+Using an LLM (Gemini):
+- 🏋️ **Workout Plan** — 7-day routine with exercises, sets, reps & rest
+- 🥗 **Diet Plan** — meals with calories & macros
+- 💡 **Tips & Motivation** — lifestyle & consistency advice  
+All plans are **fully dynamic**, no hardcoded data.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🖼️ AI Image Generation
+- Generate images for exercises or meals on demand
+- Powered via AI image APIs (with fallback support)
+- Inline image preview inside plan cards
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔊 Voice & Export
+- 🔈 Listen to your plan using text-to-speech
+- 📄 Export the complete plan as a **PDF**
+- 🔄 Regenerate plan anytime
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### 🎨 UI & UX
+- Dark / Light mode (Zustand + CSS variables)
+- Smooth animations using Framer Motion
+- Responsive & accessible design using Shadcn UI
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Tools |
+|--------|------|
+| Frontend | Next.js (App Router), React |
+| Styling | Tailwind CSS, Shadcn UI, Radix UI |
+| State | Zustand (persisted store) |
+| AI | Google Gemini / OpenAI (LLM) |
+| Images | AI Image APIs / Unsplash fallback |
+| Voice | ElevenLabs / TTS |
+| Animations | Framer Motion |
+| Export | jsPDF, html2canvas |
+| Deployment | Vercel |
+
+---
+
+## 🧩 Architecture Highlights
+- Centralized theme management using Zustand
+- Server actions via API routes
+- Optimized image rendering with `next/image`
+- Clean component separation & reusable UI primitives
