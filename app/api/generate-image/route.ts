@@ -50,10 +50,7 @@ export async function POST(req: NextRequest) {
       {
         prompt,
         type,
-        width: 512,
-        height: 512,
       },
-      apiKey
     );
 
     if (result.success && result.imageUrl) {
@@ -66,12 +63,12 @@ export async function POST(req: NextRequest) {
         model: result.model,
       });
     } else {
-      console.error(`Image generation failed: ${result.error}`);
+      console.error(`Image generation failed`);
       
       return NextResponse.json(
         {
           success: false,
-          error: result.error || 'Failed to generate image',
+          error: 'Failed to generate image',
         },
         { status: 500 }
       );
