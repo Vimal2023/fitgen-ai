@@ -146,7 +146,10 @@ export async function generateMotivationQuote() {
       "Generate a short, powerful fitness motivation quote (max 20 words). Return only the quote."
     );
 
-    return result.response.text().replace(/^["'`]|["'`]$/g, "").trim();
+    return result.response
+      .text()
+      .replace(/^["'`]|["'`]$/g, "")
+      .trim();
   } catch (error) {
     console.error("Motivation quote failed:", error);
     return "Push yourself because no one else will!";
@@ -246,7 +249,47 @@ function getFallbackPlan(userData: UserData) {
         ],
       },
     ],
-    dietPlan: [],
+    dietPlan: [
+      {
+        day: "Day 1",
+        meals: [
+          {
+            type: "breakfast",
+            name: "Oatmeal with Fruits",
+            calories: 350,
+            protein: "15g",
+            carbs: "45g",
+            fats: "10g",
+            description: "Healthy fiber-rich breakfast",
+          },
+          {
+            type: "lunch",
+            name:
+              userData.dietaryPreference === "vegetarian"
+                ? "Paneer & Veg Bowl"
+                : "Grilled Chicken & Rice",
+            calories: 500,
+            protein: "35g",
+            carbs: "50g",
+            fats: "15g",
+            description: "Balanced protein-rich meal",
+          },
+          {
+            type: "dinner",
+            name:
+              userData.dietaryPreference === "vegetarian"
+                ? "Dal + Roti + Salad"
+                : "Fish + Veggies",
+            calories: 450,
+            protein: "30g",
+            carbs: "40g",
+            fats: "12g",
+            description: "Light and nutritious dinner",
+          },
+        ],
+      },
+    ],
+
     tips: [
       "Stay hydrated throughout the day",
       "Sleep at least 7–8 hours",
